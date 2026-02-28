@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<!-- 
+    Program name: patient-form.html
+    Author: Joseph Kings Achar
+    Date created: February 14, 2026
+    Date last edited: February 26, 2026
+    Version: 1.0
+    Description: Patient registration form for King's Medical clinic
+
+-->
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css"> <!--links to external CSS file-->
+
+        <!--displays text in the browser tab-->
+        <title>New Patient Registration | King's Medical</title>
+    </head>
+    <body>
+        <!-- Header section with banner -->
+        <header>
+            <table width="100%">
+            <tr>
+                <td valign="top" align="left" width="20%">
+                    <div class="image">
+                        <img align="center" src="cliniclogo.jpg" alt="King's Medical Logo" width="80px" id="logo"/>
+                    </div>
+                </td>
+
+                <td>
+                    <h1>KING'S MEDICAL</h1>
+                </td>
+
+                <td valign="bottom" align="right" width="20%">
+                    <p>Today's Date: <span id="today"></span></p>
+                </td>
+            </tr>
+            </table>
+        </header>
+        
+        <hr>
+        
+        <!-- Main registration form -->
+        <form action="thankyou.html">
+            <center>
+                <div class="format">
+                    <table>
+                        <!-- Form title -->
+                        <tr>
+                            <th colspan="4">Patient Registration Form</th>
+                        </tr>
+                        
+                        <!-- Personal Information Section -->
+                        <tr>
+                            <th colspan="4">Personal Information</th>
+                        </tr>
+                        
+                        <!-- First Name, Middle Initial, Last Name on SAME LINE -->
+                        <tr>
+                            <td class="td1"><label for="fname">Full Name:</label></td>
+                            <td colspan="3">
+                                <input type="text" name="fname" id="fname" maxlength="30" required placeholder="Joseph" style="width:100px;"> 
+                                <input type="text" name="mini" id="mini" maxlength="1" placeholder="MI" style="width:40px;"> 
+                                <input type="text" name="lname" id="lname" maxlength="30" required placeholder="Achar" style="width:100px;">
+                            </td>
+                        </tr>
+
+                        <!-- Gender radio buttons -->
+                        <tr>
+                            <td class="td1"><label>Gender:</label></td>
+                            <td colspan="3">
+                                <input type="radio" id="g1" name="pgender" value="Male"/> Male 
+                                <input type="radio" id="g2" name="pgender" value="Female"/> Female
+                                <input type="radio" id="g3" name="pgender" value="Other"/> Other
+                            </td>
+                        </tr>
+
+                        <!-- Date of Birth -->
+                        <tr>
+                            <td class="td1"><label for="dob">Date of Birth:</label></td>
+                            <td colspan="3">
+                                <input type="date" id="dob" name="dob" placeholder="11/09/2002"/>
+                            </td>
+                        </tr>
+
+                        <!-- Social Security Number -->
+                        <tr>
+                            <td class="td1"><label for="ssn">Social Security:</label></td>
+                            <td colspan="3">
+                                <input type="password" minlength="9" maxlength="11" name="ssn" id="ssn" required placeholder="123-45-6789"/>
+                            </td>
+                        </tr>
+
+                        <!-- Email and Phone -->
+                        <tr>
+                            <td class="td1"><label for="email">Email:</label></td>
+                            <td colspan="3">
+                                <input type="email" name="email" id="email" required placeholder="123@gmail.com"/>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="td1"><label for="phone">Phone:</label></td>
+                            <td colspan="3">
+                                <input type="text" name="phone" id="phone" required placeholder="123-456-7890"/>
+                            </td>
+                        </tr>
+
+                        <!-- Address Section -->
+                        <tr>
+                            <th colspan="4">Address Information</th>
+                        </tr>
+
+                        <!-- Address Line 1 -->
+                        <tr>
+                            <td class="td1"><label for="address1">Address Line 1:</label></td>
+                            <td colspan="3">
+                                <input type="text" name="address1" id="address1" maxlength="30" required placeholder="1234 Main St"/>
+                            </td>
+                        </tr>
+
+                        <!-- Address Line 2 -->
+                        <tr>
+                            <td class="td1"><label for="address2">Address Line 2:</label></td>
+                            <td colspan="3">
+                                <input type="text" name="address2" id="address2" maxlength="30" placeholder="Apt, Suite, etc."/>
+                            </td>
+                        </tr>
+
+                        <!-- City, State, Zip on SAME LINE -->
+                        <tr>
+                            <td class="td1"><label>City, State, Zip:</label></td>
+                            <td colspan="3">
+                                <input type="text" name="city" id="city" maxlength="30" required placeholder="Houston" style="width:120px;">
+                                
+                                <select name="state" id="state" style="width:100px;">
+                                    <option selected disabled>State</option>
+                                    <option value="AL">AL</option>
+                                    <option value="AK">AK</option>
+                                    <option value="AZ">AZ</option>
+                                    <option value="AR">AR</option>
+                                    <option value="CA">CA</option>
+                                    <option value="CO">CO</option>
+                                    <option value="CT">CT</option>
+                                    <option value="DE">DE</option>
+                                    <option value="DC">DC</option>
+                                    <option value="FL">FL</option>
+                                    <option value="GA">GA</option>
+                                    <option value="HI">HI</option>
+                                    <option value="ID">ID</option>
+                                    <option value="IL">IL</option>
+                                    <option value="IN">IN</option>
+                                    <option value="IA">IA</option>
+                                    <option value="KS">KS</option>
+                                    <option value="KY">KY</option>
+                                    <option value="LA">LA</option>
+                                    <option value="ME">ME</option>
+                                    <option value="MD">MD</option>
+                                    <option value="MA">MA</option>
+                                    <option value="MI">MI</option>
+                                    <option value="MN">MN</option>
+                                    <option value="MS">MS</option>
+                                    <option value="MO">MO</option>
+                                    <option value="MT">MT</option>
+                                    <option value="NE">NE</option>
+                                    <option value="NV">NV</option>
+                                    <option value="NH">NH</option>
+                                    <option value="NJ">NJ</option>
+                                    <option value="NM">NM</option>
+                                    <option value="NY">NY</option>
+                                    <option value="NC">NC</option>
+                                    <option value="ND">ND</option>
+                                    <option value="OH">OH</option>
+                                    <option value="OK">OK</option>
+                                    <option value="OR">OR</option>
+                                    <option value="PA">PA</option>
+                                    <option value="PR">PR</option>
+                                    <option value="RI">RI</option>
+                                    <option value="SC">SC</option>
+                                    <option value="SD">SD</option>
+                                    <option value="TN">TN</option>
+                                    <option value="TX">TX</option>
+                                    <option value="UT">UT</option>
+                                    <option value="VT">VT</option>
+                                    <option value="VA">VA</option>
+                                    <option value="WA">WA</option>
+                                    <option value="WV">WV</option>
+                                    <option value="WI">WI</option>
+                                    <option value="WY">WY</option>
+                                </select>
+                                
+                                <input type="text" name="zcode" id="zcode" minlength="5" maxlength="10" required placeholder="77001" style="width:70px;">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th colspan="4"><hr></th>
+                        </tr>
+                        
+                        <!-- Medical History Section -->
+                        <tr>
+                            <th colspan="4">Medical History</th>
+                        </tr>
+
+                        <!-- Checkboxes (5 options) -->
+                        <tr>
+                            <td class="td1"><label>Have you ever had:</label></td>
+                            <td colspan="3">
+                                <input type="checkbox" id="option1" name="history" value="Chicken Pox"> Chicken Pox<br>
+                                <input type="checkbox" id="option2" name="history" value="COVID-19"> COVID-19<br>
+                                <input type="checkbox" id="option3" name="history" value="Small Pox"> Small Pox<br>
+                                <input type="checkbox" id="option4" name="history" value="Measles"> Measles<br>
+                                <input type="checkbox" id="option5" name="history" value="Tetanus"> Tetanus
+                            </td>
+                        </tr>
+
+                        <!-- Text area for symptoms -->
+                        <tr>
+                            <td class="td1"><label for="notes">Describe symptoms:</label></td>
+                            <td colspan="3">
+                                <textarea rows="4" cols="50" maxlength="200" id="notes" name="notes" placeholder="Please describe any current symptoms..."></textarea>
+                            </td>    
+                        </tr>
+                        
+                        <!-- Health rating slider -->
+                        <tr>
+                            <td class="td1"><label for="range">Health Rating (1-10):</label></td>
+                            <td colspan="3">
+                                <input type="range" name="healthRating" id="range" min="1" max="10" value="5">
+                                <span id="rangeValue">5</span>
+                            </td>
+                        </tr>
+
+                        <!-- Additional radio buttons (3 sets) -->
+                        <tr>
+                            <td class="td1"><label>Vaccinated?</label></td>
+                            <td>
+                                <input type="radio" name="vaccinated" value="Yes"> Yes
+                                <input type="radio" name="vaccinated" value="No"> No
+                            </td>
+                            <td class="td1"><label>Insurance?</label></td>
+                            <td>
+                                <input type="radio" name="insurance" value="Yes"> Yes
+                                <input type="radio" name="insurance" value="No"> No
+                            </td>
+                        </tr>
+
+                        <!-- Patient Portal Account Section -->
+                        <tr>
+                            <th colspan="4">Patient Portal Account</th>
+                        </tr>
+
+                        <!-- User ID -->
+                        <tr>
+                            <td class="td1"><label for="uid">User ID:</label></td>
+                            <td colspan="3">
+                                <input type="text" name="uid" id="uid" maxlength="20" required placeholder="Choose username">
+                            </td>
+                        </tr>
+                        
+                        <!-- Password and Re-enter Password -->
+                        <tr>
+                            <td class="td1"><label for="pword">Password:</label></td>
+                            <td>
+                                <input type="password" name="pword" id="pword" minlength="8" required>
+                            </td>
+                            <td class="td1"><label for="pword2">Re-enter:</label></td>
+                            <td>
+                                <input type="password" name="pword2" id="pword2" minlength="8" required>
+                            </td>
+                        </tr>
+
+                        <!-- Form buttons -->
+                        <tr>
+                            <td colspan="4" align="center">
+                                <input type="submit" value="Submit Registration">
+                                <input type="reset" value="Clear and Start Over">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </center>
+        </form>
+        
+        <!-- Footer section with clickable element -->
+        <footer>
+            <hr>
+            <table width="100%">
+                <tr>
+                    <td align="left">
+                        <p><strong>King's Medical</strong><br>
+                        4567 Main Street<br>
+                        Houston, TX 77002</p>
+                    </td>
+                    <td align="center">
+                        <button onclick="window.location.href='contact.html';">Contact Us</button>
+                    </td>
+                    <td align="right">
+                        <a href="#">Facebook</a> | 
+                        <a href="#">Twitter</a> | 
+                        <a href="#">LinkedIn</a>
+                    </td>
+                </tr>
+            </table>
+            <p align="center"><small>&copy; 2026 King's Medical. All rights reserved.</small></p>
+        </footer>
+        
+        <!-- JavaScript for dynamic date and slider -->
+        <script>
+            // Display current date dynamically
+            const today = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('today').textContent = today.toLocaleDateString('en-US', options);
+            
+            // Update range slider value
+            const slider = document.getElementById('range');
+            const output = document.getElementById('rangeValue');
+            output.innerHTML = slider.value;
+            
+            slider.oninput = function() {
+                output.innerHTML = this.value;
+            }
+        </script>
+    </body>
+</html>
+<!-- End of patient registration form for King's Medical -->
